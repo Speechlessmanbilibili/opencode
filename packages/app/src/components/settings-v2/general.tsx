@@ -262,14 +262,6 @@ export const SettingsGeneralV2: Component<{
           </div>
         </SettingsRowV2>
 
-        <SettingsRowV2
-          title={language.t("settings.action.resetAll")}
-          description={language.t("settings.action.resetAll.description")}
-        >
-          <ButtonV2 size="small" variant="neutral" onClick={restoreDefaults}>
-            {language.t("common.reset")}
-          </ButtonV2>
-        </SettingsRowV2>
       </SettingsListV2>
     </div>
   )
@@ -309,7 +301,7 @@ export const SettingsGeneralV2: Component<{
         <div class="settings-v2-tab-header-row">
           <h2 class="settings-v2-tab-title">{language.t("settings.tab.general")}</h2>
           <ButtonV2 size="small" variant="ghost-muted" onClick={restoreDefaults}>
-            {language.t("settings.action.restoreDefaults")}
+            {language.t("common.reset")}
           </ButtonV2>
         </div>
       </div>
