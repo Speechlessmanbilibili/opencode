@@ -1,0 +1,163 @@
+name: fork-release
+run-name: release v${{ inputs.version || '1.18.18' }}
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - .github/workflows/fork-release.yml
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version without the v prefix
+        required: true
+        default: 1.18.18
+        type: string
+
+concurrency:
+  group: fork-release-v${{ inputs.version || '1.18.18' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  VERSION: ${{ inputs.version || '1.18.18' }}
+  TAG: v${{ inputs.version || '1.18.18' }}
+  GH_REPO: ${{ github.repository }}
+  OPENCODE_VERSION: ${{ inputs.version || '1.18.18' }}
+  OPENCODE_RELEASE: "1"
+  OPENCODE_CHANNEL: prod
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > "$RUNNER_TEMP/release-notes.md" <<'EOF'
+          ## Core
+          ### Bugfixes
+          - Select the Kimi system prompt correctly for official Moonshot and Kimi providers
+          - Fix xhigh reasoning effort for xai models
+
+          ## Localization
+          ### Simplified Chinese
+          - Keep token terminology consistently translated as “词元”
+          EOF
+          gh release create "$TAG" \
+            --repo "$GH_REPO" \
+            --target "$GITHUB_SHA" \
+            --title "$TAG" \
+            --notes-file "$RUNNER_TEMP/release-notes.md" \
+            --draft
+
+  cli:
+    needs: release
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: ./.github/actions/setup-bun
+      - name: Build and upload CLI archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bun ./packages/opencode/script/build.ts
+
+  desktop:
+    needs: release
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-26-intel
+            flags: --mac --x64 --config.mac.notarize=false --config.mac.hardenedRuntime=false --config.dmg.sign=false
+            install: --os=darwin --cpu=x64
+            app_dir: mac
+            tar_name: opencode-desktop-mac-x64.app.tar.gz
+          - runner: macos-26
+            flags: --mac --arm64 --config.mac.notarize=false --config.mac.hardenedRuntime=false --config.dmg.sign=false
+            install: --os=darwin --cpu=arm64
+            app_dir: mac-arm64
+            tar_name: opencode-desktop-mac-arm64.app.tar.gz
+          - runner: windows-2025
+            flags: --win --x64
+            install: --os=win32 --cpu=x64
+            app_dir: ""
+            tar_name: ""
+          - runner: windows-2025
+            flags: --win --arm64
+            install: --os=win32 --cpu=arm64
+            app_dir: ""
+            tar_name: ""
+          - runner: ubuntu-24.04
+            flags: --linux --x64
+            install: --os=linux --cpu=x64
+            app_dir: ""
+            tar_name: ""
+          - runner: ubuntu-24.04-arm
+            flags: --linux --arm64
+            install: --os=linux --cpu=arm64
+            app_dir: ""
+            tar_name: ""
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: ./.github/actions/setup-bun
+        with:
+          install-flags: ${{ matrix.install }}
+      - name: Install Linux packaging tools
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends rpm
+      - name: Disable proprietary signing for fork builds
+        shell: bash
+        run: |
+          sed -i.bak '/async function signWindows/a\  if (process.env.FORK_RELEASE === "true") return' packages/desktop/electron-builder.config.ts
+      - name: Prepare desktop
+        working-directory: packages/desktop
+        run: bun ./scripts/prepare.ts
+      - name: Build desktop
+        working-directory: packages/desktop
+        env:
+          FORK_RELEASE: "true"
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        run: bun run build
+      - name: Package desktop
+        working-directory: packages/desktop
+        env:
+          FORK_RELEASE: "true"
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        run: bunx electron-builder ${{ matrix.flags }} --publish never --config electron-builder.config.ts
+      - name: Create macOS app archive
+        if: runner.os == 'macOS'
+        shell: bash
+        working-directory: packages/desktop/dist
+        run: |
+          app_path=$(find "${{ matrix.app_dir }}" -maxdepth 1 -name "*.app" -type d | head -1)
+          test -n "$app_path"
+          tar -czf "${{ matrix.tar_name }}" -C "$(dirname "$app_path")" "$(basename "$app_path")"
+      - name: Upload desktop release assets
+        shell: bash
+        working-directory: packages/desktop/dist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          files=(*.exe *.blockmap *.dmg *.zip *.AppImage *.deb *.rpm *.app.tar.gz)
+          test ${#files[@]} -gt 0
+          gh release upload "$TAG" "${files[@]}" --clobber --repo "$GH_REPO"
+
+  publish:
+    needs:
+      - cli
+      - desktop
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release edit "$TAG" --draft=false --repo "$GH_REPO"
