@@ -118,7 +118,7 @@ jobs:
           install-flags: ${{ matrix.install }}
       - name: Install Windows host bundler
         if: runner.os == 'Windows'
-        run: bun install --no-save @rollup/rollup-win32-x64-msvc
+        run: bun install --no-save --ignore-scripts @rollup/rollup-win32-x64-msvc
       - name: Install Linux packaging tools
         if: runner.os == 'Linux'
         run: |
@@ -139,11 +139,21 @@ jobs:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
         run: bun run build
       - name: Package desktop
+        shell: bash
         working-directory: packages/desktop
         env:
           FORK_RELEASE: "true"
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
-        run: bunx electron-builder ${{ matrix.flags }} --publish never --config electron-builder.config.ts
+        run: |
+          if bunx electron-builder ${{ matrix.flags }} --publish never --config electron-builder.config.ts; then
+            exit 0
+          fi
+          if [ "$RUNNER_OS" != "macOS" ]; then
+            exit 1
+          fi
+          hdiutil info | awk '/\/Volumes\/OpenCode/{print $1}' | xargs -n1 hdiutil detach -force || true
+          sleep 10
+          bunx electron-builder ${{ matrix.flags }} --publish never --config electron-builder.config.ts
       - name: Create macOS app archive
         if: runner.os == 'macOS'
         shell: bash
