@@ -17,7 +17,7 @@ on:
 
 concurrency:
   group: fork-release-v${{ inputs.version || '1.18.18' }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -116,6 +116,9 @@ jobs:
       - uses: ./.github/actions/setup-bun
         with:
           install-flags: ${{ matrix.install }}
+      - name: Install Windows host bundler
+        if: runner.os == 'Windows'
+        run: bun install --no-save @rollup/rollup-win32-x64-msvc
       - name: Install Linux packaging tools
         if: runner.os == 'Linux'
         run: |
