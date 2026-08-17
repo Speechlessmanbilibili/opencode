@@ -48,12 +48,20 @@ jobs:
           ### Simplified Chinese
           - Keep token terminology consistently translated as “词元”
           EOF
-          gh release create "$TAG" \
-            --repo "$GH_REPO" \
-            --target "$GITHUB_SHA" \
-            --title "$TAG" \
-            --notes-file "$RUNNER_TEMP/release-notes.md" \
-            --draft
+          if gh release view "$TAG" --repo "$GH_REPO" >/dev/null 2>&1; then
+            gh release edit "$TAG" \
+              --repo "$GH_REPO" \
+              --title "$TAG" \
+              --notes-file "$RUNNER_TEMP/release-notes.md" \
+              --draft
+          else
+            gh release create "$TAG" \
+              --repo "$GH_REPO" \
+              --target "$GITHUB_SHA" \
+              --title "$TAG" \
+              --notes-file "$RUNNER_TEMP/release-notes.md" \
+              --draft
+          fi
 
   cli:
     needs: release
@@ -114,6 +122,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends rpm
       - name: Disable proprietary signing for fork builds
+        if: runner.os == 'Windows'
         shell: bash
         run: |
           sed -i.bak '/async function signWindows/a\  if (process.env.FORK_RELEASE === "true") return' packages/desktop/electron-builder.config.ts
