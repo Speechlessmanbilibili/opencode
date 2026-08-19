@@ -254,6 +254,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "seguenti eccezioni",
 
   "go.title": "OpenCode Go | Modelli di coding a basso costo per tutti",
+  "go.banner.text": "Hy3 offre limiti di utilizzo 8x superiori per un periodo limitato",
   "go.meta.description":
     "Go inizia a $5 per il primo mese, poi $10/mese, con limiti di utilizzo generosi e un accesso affidabile ai principali modelli di coding.",
   "go.hero.title": "Modelli di coding a basso costo per tutti",
@@ -341,7 +342,6 @@ export const dict = {
   "go.faq.a5.retention": "Conservazione dei dati",
   "go.faq.a5.retention30": "30 giorni",
   "go.faq.a5.retention0": "0 giorni",
-  "go.faq.a5.used": "Utilizzato",
   "go.faq.a5.notUsed": "Non utilizzato",
   "go.faq.a5.noAgreement": "Nessun accordo",
   "go.faq.a5.grokRetention":
@@ -390,6 +390,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "Il modello è disabilitato",
   "zen.api.error.regionNotAllowed":
     "La versione più recente di questo modello è disponibile solo con hosting in Cina e richiede un consenso esplicito: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "Questo modello non è disponibile nel tuo paese.",
+  "zen.api.error.trainingNotAllowed":
+    "Questo modello raccoglie dati utilizzati per migliorarne la qualità e richiede il tuo consenso esplicito: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "La promozione gratuita di {{model}} è terminata. Puoi continuare a usare il modello abbonandoti a OpenCode Go - {{link}}",
 

@@ -253,6 +253,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "ข้อยกเว้นดังนี้",
 
   "go.title": "OpenCode Go | โมเดลเขียนโค้ดราคาประหยัดสำหรับทุกคน",
+  "go.banner.text": "Hy3 เพิ่มโควตาการใช้งานเป็น 8 เท่าในช่วงเวลาจำกัด",
   "go.meta.description":
     "Go เริ่มต้นที่ $5 สำหรับเดือนแรก จากนั้น $10/เดือน พร้อมขีดจำกัดการใช้งานที่เอื้อเฟื้อและการเข้าถึงโมเดลเขียนโค้ดชั้นนำอย่างเชื่อถือได้",
   "go.hero.title": "โมเดลเขียนโค้ดราคาประหยัดสำหรับทุกคน",
@@ -339,7 +340,6 @@ export const dict = {
   "go.faq.a5.retention": "การเก็บรักษาข้อมูล",
   "go.faq.a5.retention30": "30 วัน",
   "go.faq.a5.retention0": "0 วัน",
-  "go.faq.a5.used": "นำไปใช้",
   "go.faq.a5.notUsed": "ไม่นำไปใช้",
   "go.faq.a5.noAgreement": "ไม่มีข้อตกลง",
   "go.faq.a5.grokRetention":
@@ -387,6 +387,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "โมเดลถูกปิดใช้งาน",
   "zen.api.error.regionNotAllowed":
     "โมเดลเวอร์ชันล่าสุดนี้ให้บริการเฉพาะผ่านระบบที่โฮสต์ในประเทศจีน และต้องให้ความยินยอมอย่างชัดแจ้งก่อนใช้งาน: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "โมเดลนี้ไม่พร้อมให้บริการในประเทศของคุณ",
+  "zen.api.error.trainingNotAllowed":
+    "โมเดลนี้เก็บรวบรวมข้อมูลที่ใช้เพื่อปรับปรุงคุณภาพของโมเดล และต้องได้รับความยินยอมอย่างชัดแจ้งก่อนใช้งาน: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "โปรโมชันฟรีสำหรับ {{model}} สิ้นสุดแล้ว คุณสามารถใช้โมเดลต่อได้โดยสมัครสมาชิก OpenCode Go - {{link}}",
 

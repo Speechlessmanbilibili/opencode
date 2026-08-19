@@ -258,6 +258,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "следующими исключениями",
 
   "go.title": "OpenCode Go | Недорогие модели для кодинга для всех",
+  "go.banner.text": "Hy3 получает 8x лимиты использования на ограниченное время",
   "go.meta.description":
     "Go стоит $5 за первый месяц, затем $10/месяц и предлагает щедрые лимиты использования и надежный доступ к ведущим моделям для кодинга.",
   "go.hero.title": "Недорогие модели для кодинга для всех",
@@ -347,7 +348,6 @@ export const dict = {
   "go.faq.a5.retention": "Хранение данных",
   "go.faq.a5.retention30": "30 дней",
   "go.faq.a5.retention0": "0 дней",
-  "go.faq.a5.used": "Используется",
   "go.faq.a5.notUsed": "Не используется",
   "go.faq.a5.noAgreement": "Нет соглашения",
   "go.faq.a5.grokRetention":
@@ -397,6 +397,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "Модель отключена",
   "zen.api.error.regionNotAllowed":
     "Последняя версия этой модели размещена только в Китае. Чтобы использовать её, необходимо явно подтвердить согласие: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "Эта модель недоступна в вашей стране.",
+  "zen.api.error.trainingNotAllowed":
+    "Эта модель собирает данные, которые используются для улучшения её качества, и требует явного согласия: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "Бесплатная акция для {{model}} завершена. Вы можете продолжить использование модели, подписавшись на OpenCode Go - {{link}}",
 

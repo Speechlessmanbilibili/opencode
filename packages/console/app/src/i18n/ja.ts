@@ -253,6 +253,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "以下の例外",
 
   "go.title": "OpenCode Go | すべての人のための低価格なコーディングモデル",
+  "go.banner.text": "Hy3の利用上限が期間限定で8倍に",
   "go.meta.description":
     "Goは最初の月$5、その後$10/月で、主要なコーディングモデルへのゆとりある利用上限と安定したアクセスを提供します。",
   "go.hero.title": "すべての人のための低価格なコーディングモデル",
@@ -341,7 +342,6 @@ export const dict = {
   "go.faq.a5.retention": "データ保持",
   "go.faq.a5.retention30": "30日",
   "go.faq.a5.retention0": "0日",
-  "go.faq.a5.used": "使用あり",
   "go.faq.a5.notUsed": "使用なし",
   "go.faq.a5.noAgreement": "契約なし",
   "go.faq.a5.grokRetention":
@@ -389,6 +389,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "モデルが無効です",
   "zen.api.error.regionNotAllowed":
     "このモデルの最新バージョンは中国でのみホスト提供されており、利用するには明示的なオプトインが必要です: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "このモデルはお住まいの国では利用できません。",
+  "zen.api.error.trainingNotAllowed":
+    "このモデルは品質向上のためのデータを収集します。利用するには明示的な同意が必要です: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "{{model}} の無料プロモーションは終了しました。OpenCode Go を購読するとモデルを引き続き使用できます - {{link}}",
 

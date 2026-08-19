@@ -256,6 +256,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "aşağıdaki istisnalar",
 
   "go.title": "OpenCode Go | Herkes için düşük maliyetli kodlama modelleri",
+  "go.banner.text": "Hy3 sınırlı bir süre için 8x kullanım limiti sunuyor",
   "go.meta.description":
     "Go ilk ay $5, sonrasında ayda 10$ fiyatıyla başlar; cömert kullanım limitleri ve önde gelen kodlama modellerine güvenilir erişim sunar.",
   "go.hero.title": "Herkes için düşük maliyetli kodlama modelleri",
@@ -345,7 +346,6 @@ export const dict = {
   "go.faq.a5.retention": "Veri saklama",
   "go.faq.a5.retention30": "30 gün",
   "go.faq.a5.retention0": "0 gün",
-  "go.faq.a5.used": "Kullanılır",
   "go.faq.a5.notUsed": "Kullanılmaz",
   "go.faq.a5.noAgreement": "Anlaşma yok",
   "go.faq.a5.grokRetention":
@@ -395,6 +395,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "Model devre dışı",
   "zen.api.error.regionNotAllowed":
     "Bu modelin en son sürümü yalnızca Çin'de barındırılıyor ve kullanabilmek için açıkça onay vermeniz gerekiyor: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "Bu model ülkenizde kullanılamıyor.",
+  "zen.api.error.trainingNotAllowed":
+    "Bu model, kalitesini artırmak için kullanılan verileri toplar. Modeli kullanabilmek için açıkça onay vermeniz gerekir: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "{{model}} için ücretsiz promosyon sona erdi. OpenCode Go'ya abone olarak modeli kullanmaya devam edebilirsiniz - {{link}}",
 

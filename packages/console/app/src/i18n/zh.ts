@@ -244,6 +244,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "以下例外情况除外",
 
   "go.title": "OpenCode Go | 人人可用的低成本编程模型",
+  "go.banner.text": "Hy3 限时享受 8 倍使用额度",
   "go.meta.description": "Go 首月 $5，之后 $10/月，提供充裕的使用限额，并可可靠访问领先的编程模型。",
   "go.hero.title": "人人可用的低成本编程模型",
   "go.hero.body":
@@ -325,7 +326,6 @@ export const dict = {
   "go.faq.a5.retention": "数据留存",
   "go.faq.a5.retention30": "30 天",
   "go.faq.a5.retention0": "0 天",
-  "go.faq.a5.used": "使用",
   "go.faq.a5.notUsed": "不使用",
   "go.faq.a5.noAgreement": "无协议",
   "go.faq.a5.grokRetention":
@@ -368,6 +368,8 @@ export const dict = {
   "zen.api.error.userMonthlyLimitReached": "您已达到每月支出限额 ${{amount}}。请在此处管理您的限额：{{membersUrl}}",
   "zen.api.error.modelDisabled": "模型已禁用",
   "zen.api.error.regionNotAllowed": "该模型的最新版本仅在中国提供托管服务，需明确选择启用：{{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "该模型在你所在的国家或地区不可用。",
+  "zen.api.error.trainingNotAllowed": "该模型会收集用于提升其质量的数据，使用前需要你明确同意：{{consoleGoUrl}}",
   "zen.api.error.trialEnded": "{{model}} 的限免活动已结束。您可以订阅 OpenCode Go 继续使用该模型 - {{link}}",
 
   "black.meta.title": "OpenCode Black | 访问全球顶尖编程模型",

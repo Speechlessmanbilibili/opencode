@@ -254,6 +254,7 @@ export const dict = {
   "zen.privacy.exceptionsLink": "følgende unntak",
 
   "go.title": "OpenCode Go | Rimelige kodemodeller for alle",
+  "go.banner.text": "Hy3 får 8x bruksgrense i en begrenset periode",
   "go.meta.description":
     "Go starter på $5 for den første måneden, deretter $10/måned, med sjenerøse bruksgrenser og pålitelig tilgang til ledende kodemodeller.",
   "go.hero.title": "Rimelige kodemodeller for alle",
@@ -342,7 +343,6 @@ export const dict = {
   "go.faq.a5.retention": "Dataoppbevaring",
   "go.faq.a5.retention30": "30 dager",
   "go.faq.a5.retention0": "0 dager",
-  "go.faq.a5.used": "Brukes",
   "go.faq.a5.notUsed": "Brukes ikke",
   "go.faq.a5.noAgreement": "Ingen avtale",
   "go.faq.a5.grokRetention":
@@ -392,6 +392,9 @@ export const dict = {
   "zen.api.error.modelDisabled": "Modellen er deaktivert",
   "zen.api.error.regionNotAllowed":
     "Den nyeste versjonen av denne modellen er bare tilgjengelig som en tjeneste driftet i Kina og krever at du uttrykkelig samtykker: {{consoleGoUrl}}",
+  "zen.api.error.countryNotAllowed": "Denne modellen er ikke tilgjengelig i landet ditt.",
+  "zen.api.error.trainingNotAllowed":
+    "Denne modellen samler inn data som brukes til å forbedre modellens kvalitet, og krever at du uttrykkelig samtykker: {{consoleGoUrl}}",
   "zen.api.error.trialEnded":
     "Den gratis kampanjen for {{model}} er avsluttet. Du kan fortsette å bruke modellen ved å abonnere på OpenCode Go - {{link}}",
 
