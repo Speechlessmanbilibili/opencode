@@ -344,14 +344,18 @@ export const dict = {
   "go.faq.a5.retention": "Зберігання даних",
   "go.faq.a5.retention30": "30 днів",
   "go.faq.a5.retention0": "0 днів",
+  "go.faq.a5.used": "Використовується",
   "go.faq.a5.notUsed": "Не використовується",
   "go.faq.a5.noAgreement": "Немає угоди",
+  "go.faq.a5.notZdr": "Не ZDR",
   "go.faq.a5.grokRetention":
     "ZDR вимикає важливі функції API, які залежать від збережених даних, зокрема Responses API зі збереженням стану, Files and Collections та Batch API.",
   "go.faq.a5.gptRetention":
     "Журнали моніторингу зловживань створюються для всіх випадків використання функцій API та зберігаються до 30 днів.",
   "go.faq.a5.learnMore": "Докладніше",
   "go.faq.a5.deepseekRetention": "Угода ZDR поновлюється щомісяця. Поточна угода дійсна до 31 серпня 2026 року.",
+  "go.faq.a5.museRetention":
+    "Значно знижені ціни на токени в обмін на дозвіл використовувати ваші промпти та відповіді для навчання майбутніх моделей Meta.",
 
   "go.faq.a5.beforeExceptions":
     "Моделі Go розміщені в США. Провайдери дотримуються політики нульового зберігання та не використовують ваші дані для навчання моделей, за",
@@ -674,6 +678,7 @@ export const dict = {
   "workspace.lite.subscription.selectProvider": 'Виберіть "OpenCode Go" як провайдера в конфігурації opencode.',
   "workspace.lite.providers.title": "Провайдери",
   "workspace.lite.providers.description": "Керуйте провайдерами, які використовуються для маршрутизації.",
+  "workspace.lite.providers.allowTraining": "Дозволити моделі, що навчаються на даних запитів",
   "workspace.lite.providers.useChina": "Увімкнути моделі, розміщені в Китаї",
   "workspace.lite.black.message":
     "Ви вже підписані на OpenCode Black або в списку очікування. Спочатку скасуйте підписку, якщо хочете перейти на Go.",

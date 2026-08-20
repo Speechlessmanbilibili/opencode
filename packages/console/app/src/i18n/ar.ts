@@ -339,12 +339,16 @@ export const dict = {
   "go.faq.a5.retention": "الاحتفاظ بالبيانات",
   "go.faq.a5.retention30": "30 يومًا",
   "go.faq.a5.retention0": "0 أيام",
+  "go.faq.a5.used": "مستخدَمة",
   "go.faq.a5.notUsed": "غير مستخدَمة",
   "go.faq.a5.noAgreement": "لا توجد اتفاقية",
+  "go.faq.a5.notZdr": "ليست ZDR",
   "go.faq.a5.grokRetention":
     "تعطّل ZDR ميزات API مهمة تعتمد على البيانات المخزنة، بما في ذلك Responses API ذات الحالة، وFiles and Collections، وBatch API.",
   "go.faq.a5.gptRetention":
     "تُنشأ سجلات مراقبة إساءة الاستخدام لكل استخدام لميزات API، ويُحتفظ بها لمدة تصل إلى 30 يومًا.",
+  "go.faq.a5.museRetention":
+    "أسعار توكنات مخفّضة للغاية مقابل منح الإذن باستخدام مطالباتك وإكمالات النموذج لتدريب نماذج Meta المستقبلية.",
   "go.faq.a5.learnMore": "اعرف المزيد",
   "go.faq.a5.deepseekRetention": "تُجدَّد اتفاقية ZDR شهريًا. الاتفاقية الحالية سارية حتى 31 أغسطس 2026.",
   "go.faq.a5.beforeExceptions":
@@ -667,6 +671,7 @@ export const dict = {
     'اختر "OpenCode Go" كمزود في إعدادات opencode الخاصة بك لاستخدام نماذج Go.',
   "workspace.lite.providers.title": "المزودون",
   "workspace.lite.providers.description": "تحكم في المزودين المستخدمين للتوجيه.",
+  "workspace.lite.providers.allowTraining": "السماح بالنماذج التي تتدرب على بيانات الطلبات",
   "workspace.lite.providers.useChina": "تفعيل النماذج المستضافة في الصين",
   "workspace.lite.black.message":
     "أنت مشترك حاليًا في OpenCode Black أو في قائمة الانتظار. يرجى إلغاء الاشتراك أولاً إذا كنت ترغب في التبديل إلى Go.",

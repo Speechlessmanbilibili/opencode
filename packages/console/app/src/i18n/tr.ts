@@ -346,8 +346,10 @@ export const dict = {
   "go.faq.a5.retention": "Veri saklama",
   "go.faq.a5.retention30": "30 gün",
   "go.faq.a5.retention0": "0 gün",
+  "go.faq.a5.used": "Kullanılır",
   "go.faq.a5.notUsed": "Kullanılmaz",
   "go.faq.a5.noAgreement": "Anlaşma yok",
+  "go.faq.a5.notZdr": "ZDR değil",
   "go.faq.a5.grokRetention":
     "ZDR, durum bilgisi tutan Responses API, Files and Collections ve Batch API dahil olmak üzere saklanan verilere bağlı önemli API özelliklerini devre dışı bırakır.",
   "go.faq.a5.gptRetention":
@@ -355,6 +357,8 @@ export const dict = {
   "go.faq.a5.learnMore": "Daha fazla bilgi",
   "go.faq.a5.deepseekRetention":
     "ZDR anlaşması aylık olarak yenilenir. Mevcut anlaşma 31 Ağustos 2026 tarihine kadar geçerlidir.",
+  "go.faq.a5.museRetention":
+    "İstemlerinizi ve tamamlamalarınızı gelecekteki Meta modellerini eğitmek için kullanma izni karşılığında büyük ölçüde indirimli token fiyatları.",
 
   "go.faq.a5.beforeExceptions":
     "Go modelleri ABD'de barındırılmaktadır. Sağlayıcılar sıfır saklama politikası izler ve verilerinizi model eğitimi için kullanmaz; şu",
@@ -679,6 +683,7 @@ export const dict = {
     'Go modellerini kullanmak için opencode yapılandırmanızda "OpenCode Go"\'yu sağlayıcı olarak seçin.',
   "workspace.lite.providers.title": "Sağlayıcılar",
   "workspace.lite.providers.description": "Yönlendirme için hangi sağlayıcıların kullanılacağını kontrol edin.",
+  "workspace.lite.providers.allowTraining": "İstek verileriyle eğitilen modellere izin ver",
   "workspace.lite.providers.useChina": "Çin'de barındırılan modelleri etkinleştir",
   "workspace.lite.black.message":
     "Şu anda OpenCode Black abonesisiniz veya bekleme listesindesiniz. Go'ya geçmek istiyorsanız lütfen önce aboneliğinizi iptal edin.",

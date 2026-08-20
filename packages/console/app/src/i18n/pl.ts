@@ -344,14 +344,18 @@ export const dict = {
   "go.faq.a5.retention": "Retencja danych",
   "go.faq.a5.retention30": "30 dni",
   "go.faq.a5.retention0": "0 dni",
+  "go.faq.a5.used": "Wykorzystywane",
   "go.faq.a5.notUsed": "Niewykorzystywane",
   "go.faq.a5.noAgreement": "Brak umowy",
+  "go.faq.a5.notZdr": "Nie ZDR",
   "go.faq.a5.grokRetention":
     "ZDR wyłącza ważne funkcje API zależne od przechowywanych danych, w tym stanowy Responses API, Files and Collections oraz Batch API.",
   "go.faq.a5.gptRetention":
     "Dzienniki monitorowania nadużyć są generowane dla każdego użycia funkcji API i przechowywane przez maksymalnie 30 dni.",
   "go.faq.a5.learnMore": "Dowiedz się więcej",
   "go.faq.a5.deepseekRetention": "Umowa ZDR jest odnawiana co miesiąc. Obecna umowa obowiązuje do 31 sierpnia 2026 r.",
+  "go.faq.a5.museRetention":
+    "Znacznie obniżone ceny tokenów w zamian za zgodę na wykorzystanie Twoich promptów i odpowiedzi do trenowania przyszłych modeli Meta.",
 
   "go.faq.a5.beforeExceptions":
     "Modele Go są hostowane w USA. Dostawcy stosują politykę zerowej retencji i nie używają Twoich danych do trenowania modeli, z",
@@ -676,6 +680,7 @@ export const dict = {
     'Wybierz "OpenCode Go" jako dostawcę w konfiguracji opencode, aby używać modeli Go.',
   "workspace.lite.providers.title": "Dostawcy",
   "workspace.lite.providers.description": "Kontroluj, którzy dostawcy są używani do routingu.",
+  "workspace.lite.providers.allowTraining": "Zezwalaj na modele wykorzystujące dane żądań do trenowania",
   "workspace.lite.providers.useChina": "Włącz modele hostowane w Chinach",
   "workspace.lite.black.message":
     "Obecnie subskrybujesz OpenCode Black lub jesteś na liście oczekujących. Jeśli chcesz przejść na Go, najpierw anuluj subskrypcję.",

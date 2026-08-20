@@ -346,12 +346,16 @@ export const dict = {
   "go.faq.a5.retention": "Retención de datos",
   "go.faq.a5.retention30": "30 días",
   "go.faq.a5.retention0": "0 días",
+  "go.faq.a5.used": "Utilizado",
   "go.faq.a5.notUsed": "No utilizado",
   "go.faq.a5.noAgreement": "Sin acuerdo",
+  "go.faq.a5.notZdr": "Sin ZDR",
   "go.faq.a5.grokRetention":
     "ZDR deshabilita funciones importantes de la API que dependen de datos almacenados, incluidas la Responses API con estado, Files and Collections y la Batch API.",
   "go.faq.a5.gptRetention":
     "Se generan registros de supervisión de abusos para todo el uso de funciones de la API y se conservan durante un máximo de 30 días.",
+  "go.faq.a5.museRetention":
+    "Precios de tokens muy reducidos a cambio de permitir que tus prompts y las respuestas generadas se utilicen para entrenar futuros modelos de Meta.",
   "go.faq.a5.learnMore": "Más información",
   "go.faq.a5.deepseekRetention":
     "El acuerdo de ZDR se renueva mensualmente. El acuerdo actual es válido hasta el 31 de agosto de 2026.",
@@ -678,6 +682,7 @@ export const dict = {
     'Selecciona "OpenCode Go" como proveedor en tu configuración de opencode para usar los modelos Go.',
   "workspace.lite.providers.title": "Proveedores",
   "workspace.lite.providers.description": "Controla qué proveedores se usan para el enrutamiento.",
+  "workspace.lite.providers.allowTraining": "Permitir modelos que se entrenan con los datos de las solicitudes",
   "workspace.lite.providers.useChina": "Activar modelos alojados en China",
   "workspace.lite.black.message":
     "Actualmente estás suscrito a OpenCode Black o estás en la lista de espera. Por favor, cancela la suscripción primero si deseas cambiar a Go.",

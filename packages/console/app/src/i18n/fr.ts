@@ -347,12 +347,16 @@ export const dict = {
   "go.faq.a5.retention": "Conservation des données",
   "go.faq.a5.retention30": "30 jours",
   "go.faq.a5.retention0": "0 jour",
+  "go.faq.a5.used": "Utilisé",
   "go.faq.a5.notUsed": "Non utilisé",
   "go.faq.a5.noAgreement": "Aucun accord",
+  "go.faq.a5.notZdr": "Pas de ZDR",
   "go.faq.a5.grokRetention":
     "Le ZDR désactive d'importantes fonctionnalités API qui dépendent des données stockées, notamment Responses API avec état, Files and Collections et Batch API.",
   "go.faq.a5.gptRetention":
     "Des journaux de surveillance des abus sont générés pour toute utilisation des fonctionnalités API et conservés pendant un maximum de 30 jours.",
+  "go.faq.a5.museRetention":
+    "Des tarifs de tokens fortement réduits en échange de l’autorisation d’utiliser vos prompts et vos complétions pour entraîner de futurs modèles Meta.",
   "go.faq.a5.learnMore": "En savoir plus",
   "go.faq.a5.deepseekRetention":
     "L’accord ZDR est renouvelé chaque mois. L’accord actuel est valable jusqu’au 31 août 2026.",
@@ -685,6 +689,7 @@ export const dict = {
     'Sélectionnez "OpenCode Go" comme fournisseur dans votre configuration opencode pour utiliser les modèles Go.',
   "workspace.lite.providers.title": "Fournisseurs",
   "workspace.lite.providers.description": "Contrôlez les fournisseurs utilisés pour le routage.",
+  "workspace.lite.providers.allowTraining": "Autoriser les modèles qui s’entraînent sur les données des requêtes",
   "workspace.lite.providers.useChina": "Activer les modèles hébergés en Chine",
   "workspace.lite.black.message":
     "Vous êtes actuellement abonné à OpenCode Black ou sur liste d'attente. Veuillez d'abord vous désabonner si vous souhaitez passer à Go.",

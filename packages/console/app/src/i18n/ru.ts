@@ -348,8 +348,10 @@ export const dict = {
   "go.faq.a5.retention": "Хранение данных",
   "go.faq.a5.retention30": "30 дней",
   "go.faq.a5.retention0": "0 дней",
+  "go.faq.a5.used": "Используется",
   "go.faq.a5.notUsed": "Не используется",
   "go.faq.a5.noAgreement": "Нет соглашения",
+  "go.faq.a5.notZdr": "Не ZDR",
   "go.faq.a5.grokRetention":
     "ZDR отключает важные функции API, зависящие от сохраненных данных, включая Responses API с сохранением состояния, Files and Collections и Batch API.",
   "go.faq.a5.gptRetention":
@@ -357,6 +359,8 @@ export const dict = {
   "go.faq.a5.learnMore": "Подробнее",
   "go.faq.a5.deepseekRetention":
     "Соглашение ZDR продлевается ежемесячно. Текущее соглашение действует до 31 августа 2026 года.",
+  "go.faq.a5.museRetention":
+    "Значительно сниженная стоимость токенов в обмен на разрешение использовать ваши промпты и ответы для обучения будущих моделей Meta.",
 
   "go.faq.a5.beforeExceptions":
     "Модели Go размещены в США. Провайдеры следуют политике нулевого хранения и не используют ваши данные для обучения моделей, за",
@@ -683,6 +687,7 @@ export const dict = {
     'Выберите "OpenCode Go" в качестве провайдера в настройках opencode для использования моделей Go.',
   "workspace.lite.providers.title": "Провайдеры",
   "workspace.lite.providers.description": "Управляйте провайдерами, используемыми для маршрутизации.",
+  "workspace.lite.providers.allowTraining": "Разрешить модели, обучающиеся на данных запросов",
   "workspace.lite.providers.useChina": "Включить модели, размещенные в Китае",
   "workspace.lite.black.message":
     "Вы подписаны на OpenCode Black или находитесь в списке ожидания. Пожалуйста, сначала отмените подписку, если хотите перейти на Go.",

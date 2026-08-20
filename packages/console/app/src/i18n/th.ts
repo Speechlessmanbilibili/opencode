@@ -340,12 +340,16 @@ export const dict = {
   "go.faq.a5.retention": "การเก็บรักษาข้อมูล",
   "go.faq.a5.retention30": "30 วัน",
   "go.faq.a5.retention0": "0 วัน",
+  "go.faq.a5.used": "นำไปใช้",
   "go.faq.a5.notUsed": "ไม่นำไปใช้",
   "go.faq.a5.noAgreement": "ไม่มีข้อตกลง",
+  "go.faq.a5.notZdr": "ไม่ใช่ ZDR",
   "go.faq.a5.grokRetention":
     "ZDR ปิดใช้งานฟีเจอร์ API สำคัญที่ต้องอาศัยข้อมูลที่จัดเก็บไว้ ซึ่งรวมถึง Responses API แบบมีสถานะ, Files and Collections และ Batch API",
   "go.faq.a5.gptRetention":
     "ระบบจะสร้างบันทึกการตรวจสอบการใช้งานในทางที่ผิดสำหรับการใช้งานฟีเจอร์ API ทั้งหมด และเก็บรักษาไว้นานสูงสุด 30 วัน",
+  "go.faq.a5.museRetention":
+    "ราคาของ token ลดลงอย่างมาก โดยแลกกับการอนุญาตให้นำพรอมต์และผลลัพธ์ที่สร้างขึ้นของคุณไปใช้ฝึกโมเดล Meta ในอนาคต",
   "go.faq.a5.learnMore": "ดูข้อมูลเพิ่มเติม",
   "go.faq.a5.deepseekRetention": "ข้อตกลง ZDR จะต่ออายุทุกเดือน ข้อตกลงปัจจุบันมีผลใช้ถึงวันที่ 31 สิงหาคม 2026",
 
@@ -671,6 +675,7 @@ export const dict = {
     'เลือก "OpenCode Go" เป็นผู้ให้บริการในการตั้งค่า opencode ของคุณเพื่อใช้โมเดล Go',
   "workspace.lite.providers.title": "ผู้ให้บริการ",
   "workspace.lite.providers.description": "ควบคุมผู้ให้บริการที่ใช้สำหรับการกำหนดเส้นทาง",
+  "workspace.lite.providers.allowTraining": "อนุญาตโมเดลที่ฝึกด้วยข้อมูลคำขอ",
   "workspace.lite.providers.useChina": "เปิดใช้โมเดลที่โฮสต์ในจีน",
   "workspace.lite.black.message":
     "ขณะนี้คุณสมัครสมาชิก OpenCode Black หรืออยู่ในรายการรอ โปรดยกเลิกการสมัครก่อนหากต้องการเปลี่ยนไปใช้ Go",
