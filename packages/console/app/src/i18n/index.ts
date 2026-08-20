@@ -25,7 +25,11 @@ const base = en satisfies Dict
 
 export function i18n(locale: Locale): Dict {
   if (locale === "en") return base
-  if (locale === "zh") return { ...base, ...zh }
+  if (locale === "zh") return {
+    ...base,
+    ...zh,
+    "go.faq.a5.museRetention": "以允许使用你的提示词和补全结果训练未来的 Meta 模型为交换，词元价格可获得大幅折扣。",
+  }
   if (locale === "zht") return { ...base, ...zht }
   if (locale === "ko") return { ...base, ...ko }
   if (locale === "de") return { ...base, ...de }
